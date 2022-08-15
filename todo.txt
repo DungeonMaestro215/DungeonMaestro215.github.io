@@ -1,0 +1,18 @@
+List of projects:
+OpenGL
+Paint app with animations
+LED Matrix and Website
+LED String and music and animations
+AI/ML Ideas
+Website
+Calculating Pi
+Keyboard
+Random Project Picker
+Messaging App (for LED Matrix)
+
+Website Ideas:
+Random project picker and checker
+Write About Me section
+Flesh out projects
+Add links for github, twitter, etc.
+Contact section (?)

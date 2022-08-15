@@ -1,0 +1,81 @@
+:root {
+    --color-black: #121212;
+    --color-jet: #333333;
+    --color-sapphire: #246794;
+    --color-unc: #4B9CD3;
+    --color-light: #BDDBEF;
+
+    --color-background: var(--color-black);
+    --color-text: var(--color-light);
+    --color-accent: var(--color-unc);
+}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/images/goofyrock.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/images/grad.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/images/bigrock.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+.color-black {
+    background-color: var(--color-black);
+    color: var(--color-light)
+}
+
+.color-jet {
+    background-color: var(--color-jet);
+    color: var(--color-light)
+}
+
+.color-sapphire {
+    background-color: var(--color-sapphire);
+    color: var(--color-light)
+}
+
+.color-unc {
+    background-color: var(--color-unc);
+    color: var(--color-black)
+}
+
+.color-light {
+    background-color: var(--color-light);
+    color: var(--color-black)
+}
