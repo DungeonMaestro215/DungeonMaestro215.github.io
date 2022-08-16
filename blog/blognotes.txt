@@ -1,0 +1,36 @@
+Notes for blog posts:
+
+Initial Commit: Hello World! Here's my plan. Here's the stucture. 
+
+Projects:
+OpenGL
+    Summer project
+    Rabbit hole of game of life -> gpu coding with cuda -> opengl rendering
+    Plan to turn into a physics engine
+LED Matrix and Website
+    Started Last winter
+    Had some trouble
+    Had some successes
+AI/ML Ideas
+Website
+    Inspired by William. I need to better motivate myself to work on my personal projects
+    Took templates from W3Schools
+    Simplified the color palette (I don't really know anything about that)
+    Added some smooth scrolling (very easy)
+Blog (with filters, etc.)
+Calculating Pi
+    Much Confusion
+
+Physics Engine
+    2D and 3D ideas
+Paint app with animations
+LED String and music and animations
+    Mental breakdown
+Random Project Picker
+    Fun way to keep things interesting
+Messaging App (for LED Matrix)
+Books I've Read/Things I'm Interested In scrolling thingy
+Conway's Game of Life
+
+Keyboard
+    I made a thing :)

@@ -1,18 +1,29 @@
 List of projects:
+In Progress:
 OpenGL
-Paint app with animations
 LED Matrix and Website
-LED String and music and animations
 AI/ML Ideas
 Website
+Blog (with filters, etc.)
 Calculating Pi
-Keyboard
+
+Ideas:
+Physics engine
+Paint app with animations
+LED String and music and animations
 Random Project Picker
 Messaging App (for LED Matrix)
+Books I've Read/Things I'm Interested In scrolling thingy
+Conway's Game of Life
+Minecraft Mods
+Something new! (low chance?)
+
+Completed:
+Keyboard
 
 Website Ideas:
 Random project picker and checker
 Write About Me section
 Flesh out projects
-Add links for github, twitter, etc.
+Add links for github, twitter, youtube, etc.
 Contact section (?)
