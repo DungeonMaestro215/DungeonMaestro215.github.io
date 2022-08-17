@@ -7,6 +7,7 @@ Website
 Blog (with filters, etc.)
 Calculating Pi
 
+
 Ideas:
 Physics engine
 Paint app with animations
