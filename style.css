@@ -85,3 +85,20 @@ body, html {
 a.fa {
   text-decoration: none;
 }
+
+#random-spinner {
+  position: relative;
+  top: 8px;
+  height: 27px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s linear;
+}
+
+.spinner-element {
+  transition: 1s all ease;
+}
+
+.hidden {
+  display: none;
+}
