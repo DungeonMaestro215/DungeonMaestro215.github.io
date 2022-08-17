@@ -17,6 +17,7 @@ Website
     Took templates from W3Schools
     Simplified the color palette (I don't really know anything about that)
     Added some smooth scrolling (very easy)
+    Random words in black box at top
 Blog (with filters, etc.)
 Calculating Pi
     Much Confusion
