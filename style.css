@@ -87,15 +87,25 @@ a.fa {
 }
 
 #random-spinner {
+  font-family: 'Courier New', Courier, monospace;
+  /* width: 100px; */
   position: relative;
   top: 8px;
   height: 27px;
   overflow: hidden;
   cursor: pointer;
-  transition: .5s linear;
 }
 
 .spinner-element {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.animation-halfsecond {
+  transition: .5s all ease;
+}
+
+.animation-second {
   transition: 1s all ease;
 }
 

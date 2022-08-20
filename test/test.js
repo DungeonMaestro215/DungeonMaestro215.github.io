@@ -7,12 +7,17 @@ let currentPhraseIdx = 0;
 window.onload = () => {
     // Attach on click event to spinner
     const spinner = document.getElementById("random-spinner");
-    spinner.addEventListener("mouseenter", () => ChangeSpinner(spinner));
+    // Adding these after the page loads prevents weird effects right at the start
+    spinner.classList.add("animation-halfsecond");
+    [...spinner.getElementsByClassName("spinner-element")].forEach(element => element.classList.add("animation-second"));
+    spinner.style.width = spinner.offsetWidth + "px";   // Initially starts blank causing no animation
+    // spinner.addEventListener("mouseenter", () => ChangeSpinner(spinner));
     spinner.addEventListener("click", () => ChangeSpinner(spinner));
 }
 
 // Do some fun stuff with the random spinner
 const ChangeSpinner = function(spinner) {
+    console.log(spinner.style.width);
     const N = 20;
     const heightOfSpinnerElement = 27;
 
@@ -26,22 +31,23 @@ const ChangeSpinner = function(spinner) {
     // Collect all of the divs
     let phrases = [...spinner.getElementsByClassName("spinner-element")];
 
-    // Generate N random phrases and scroll all of the divs
+    // Generate N random phrases
     for (let i = 0; i < N; i++) {
         if (i != currentPhraseIdx) {
             phrases[i].innerHTML = GetPhrase();
         }
-        phrases[i].style.transform = `translateY(${randIdx * -heightOfSpinnerElement}px)`;
     }
 
     // Adjust the spinner's width
-    // console.log(phrases[randIdx].offsetWidth);
-    // spinner.style.width = phrases[randIdx].offsetWidth + "px";
-    // console.log(spinner.offsetWidth);
-    // spinner.style.width = randIdx * 10 + "px";
+    spinner.style.width = phrases[randIdx].innerHTML.length * 10 + "px";
 
     // Update the current index
     currentPhraseIdx = randIdx;
+
+    // Scroll all of the divs
+    for (let i = 0; i < N; i++) {
+        phrases[i].style.transform = `translateY(${randIdx * -heightOfSpinnerElement}px)`;
+    }
 }
 
 const GetPhrase = function() {

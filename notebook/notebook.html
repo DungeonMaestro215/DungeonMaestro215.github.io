@@ -21,7 +21,31 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- Header -->
     <header class="w3-container w3-center w3-padding-32">
       <h1><b>MY NOTEBOOK</b></h1>
-      <p>Welcome to the notebook of <span id="random-spinner" class="w3-tag">Denver's Random Shit&trade;.</span></p>
+      <p style="display: inline">Welcome to the notebook of a </p>
+        <div id="random-spinner" class="w3-tag">
+          <div class="spinner-element">Ton of Random Shit&trade;</div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+          <div class="spinner-element"></div>
+        </div>
+        .<sup><a href="#footer">&dagger;</a></sup>
+    </header>
     </header>
 
     <!-- Grid -->
@@ -29,6 +53,148 @@ and is wrapped around the whole page content, except for the footer in this exam
 
       <!-- notebook entries -->
       <div class="w3-col l8 s12">
+
+        <!-- notebook entry template -->
+        <!-- notebook entry -->
+        <!-- <div class="w3-card-4 w3-margin w3-white">
+          <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">
+          <div class="w3-container">
+            <h3><b>NEW NOTEBOOK ENTRY</b></h3>
+            <h5>Title description, <span class="w3-opacity">January 1, 1970</span></h5>
+          </div>
+
+          <div class="w3-container">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit velit ipsum, vulputate tempor nisi 
+              porta sollicitudin. Nulla sed euismod tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+              Nam euismod dignissim vehicula. Sed efficitur nulla a neque maximus aliquam. In ante mi, lacinia id dui eget, 
+              sagittis scelerisque nibh. Cras pellentesque ex a cursus eleifend.
+              <br/>
+              <br/>
+              Sed cursus pellentesque magna, sed tempor nunc bibendum ac. Duis ornare ipsum quis justo vestibulum, sed 
+              condimentum velit auctor. Vestibulum vitae turpis ut est pellentesque porttitor. Duis porta auctor nisi. 
+              Proin pellentesque tellus quis aliquet egestas. Curabitur id mi nec velit imperdiet pulvinar. Donec nec orci placerat, 
+              congue nisl eu, condimentum orci. Cras in sapien sed sapien consectetur rutrum et sed nulla. Maecenas massa urna, 
+              tempus tincidunt posuere id, accumsan ut nulla. Sed eget elementum sapien. Quisque metus metus, efficitur sollicitudin 
+              egestas pellentesque, varius nec ligula. Integer porttitor nulla quam, eu euismod risus convallis imperdiet. Nullam porttitor, 
+              felis nec aliquet luctus, massa augue porta augue, ut feugiat sapien lacus ut sapien.
+            </p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- notebook entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="https://assets.mkdev.me/posts/covers/000/000/230/original/why-being-a-developer-is-frustrating-and-why-we-do-it-anyway.png?1607424870" alt="Cartoon of hipster purposefully pouring coffee on his laptop" style="width:100%">
+          <div class="w3-container">
+            <h3><b>WEB DEV WOES</b></h3>
+            <h5>Some reasons why I will never be a web developer, <span class="w3-opacity">August 19, 2022</span></h5>
+          </div>
+
+          <div class="w3-container">
+            <p>
+              To begin, I'm thinking about adding some kind of 'boring' tag whenever I get a tag system working. A lot of 
+              these notebook entries will probably end up being more of a changelog than actual fun or informative posts.
+              For now, however, they will remain in one big list. Also note that if you read about a feature on an old post, 
+              it is very likely to have been changed in some way in the future.
+              <br/>
+              <br/>
+              I finished up that little spinny thing at the top. It was all fine and good yesterday, but then I decided I 
+              wanted to fix the animation weirdness and ran into a whole slew of issues. For some reason, adding a smooth 
+              transition in CSS alone would not fix the width of the box changing abruptly. It required that I also manually 
+              change the width in code rather than letting the browser handle it automagically. This was good because it meant 
+              that I could size it just how I wanted it (i.e. make it fit the phrase it landed on rather than the longest 
+              random phrase that was generated), but it meant that I would have to figure out how long to actually make it. This 
+              can be a difficult problem since most fonts are not monospaced, meaning that each letter takes up the same amount of 
+              pixels. 
+              <br/>
+              <br/>
+              I made the box use a monospaced font. Problem solved. Except that none of the 
+              smooth transitions worked on the first time it was clicked. This was because 'style.width' component of that div 
+              didn't actually exist until I set it for the first time. If there is no previous width, then there is no way to 
+              smoothly transition to the new width. I solved this by setting the width of the div to the width of the div 
+              (do you see why I dislike this yet?) which is stored in the 'offsetWidth' component (which, of course, is read-only and 
+              can't just be used to change the width) 
+              once the page was loaded in. Why can't the 'style.width' just have a value at the beginning? (It is because I didn't hardcode 
+              in a width attribute at the start, I know, but why can't this value be whatever width the browser decided to give it?) 
+              To finish it off, I had to also wait until the 
+              page was loaded to add the smooth transition style to div. Otherwise, it would have this funky effect when the page 
+              was first loaded in.
+              <br/>
+              <br/>
+              I usually enjoy the code writing and debugging process. I feel that it is similar to solving a puzzle or investigating 
+              some kind of crime where I get to follow a trail of clues until I find the culprit. This is not the feeling that I get 
+              when working on websites. Instead, it is more like someone gave me an article to edit, asked me to update some of the wording 
+              using a thesaurus, and then yelled at every single suggestion that I ended up making. Instead of testing an algorithm to figure 
+              out the cases that are causing it to fail, I am trying seemingly random combinations of keywords until I end up finding what I 
+              want. Like with that 'style.width' versus 'offsetWidth' thing above. I have used 'style.width' in the past because that is how 
+              you change the width of something on the page dynamically, but now I had to search through random StackExchange posts to figure 
+              out that there is this whole separate width thing. There is no trail of breadcrumbs in the code for me to follow, just random 
+              Google searches to find the one page of documentation that can actually help me.
+              <br/>
+              <br/>
+              Okay, rant over. Idk if a lot of these posts will be ranty, but we will see. :)
+              <br/>
+              <br/>
+              Drowning in a sea of attribute names,
+              <br/>
+              Denver
+            </p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- notebook entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+          <img src="../images/notebookimgs/lucky.PNG" alt="I'm Feeling Lucky" style="width:100%">
+          <div class="w3-container">
+            <h3><b><a href="http://www.zombielandrules.com/all-zombieland-rules/" style="text-decoration: none;" target="_blank">Rule #32</a>: Enjoy the little things</b></h3>
+            <h5>Don't forget to have fun, <span class="w3-opacity">August 18, 2022</span></h5>
+          </div>
+
+          <div class="w3-container">
+            <p>
+              I don't have much to update on today, so I figured I might try to leave my future self a little bit of advice. 
+              I mostly worked on brainstorming some ideas and jotting down a bunch of notes about the features I would like this site to have. 
+              When I started to actually edit the site a little bit, that little black rectangle at the top of the page in the 
+              subheading caught my eye. It subtly reminded me of Google's "I'm Feeling Lucky" button for some odd reason. This made 
+              me really want to implement a little function that would randomize the text in that box and add some simple animations to it. 
+              Go ahead and hover over it and click it a few times. It's pretty fun.
+              All I had to do was copy down a few hundred adjectives and nouns, use some Math.random(), and, unfortunately, toy around with 
+              some CSS. 
+              <br/>
+              <br/>
+              The hardest part was actually setting up the JSON file that holds all of the words and properly accessing it 
+              on the site. There are a couple of minor things that I would like to fix, such as the size of the rectangle changing abruptly 
+              when new phrases are generated (I think this is going to require just the right Google query to figure out, as the first few 
+              'fixes' that I found didn't actually work) and probably removing some of the words so that I don't accidentally create any offensive 
+              combinations.
+              <br/>
+              <br/>
+              It is feels good when a little thing like this gets created because it can happen in such a short time, even if it does 
+              always end up having bugs and requiring me to read some documentation.
+              <br/>
+              <br/>
+              Feeling lucky,
+              <br/>
+              Denver
+            </p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- notebook entry -->
         <div class="w3-card-4 w3-margin w3-white">
           <img src="https://www.w3schools.com/w3images/woods.jpg" alt="Nature" style="width:100%">
@@ -88,58 +254,28 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <hr>
 
-        <!-- notebook entry -->
-        <div class="w3-card-4 w3-margin w3-white">
-          <img src="../images/notebookimgs/lucky.PNG" alt="I'm Feeling Lucky" style="width:100%">
-          <div class="w3-container">
-            <h3><b><a href="http://www.zombielandrules.com/all-zombieland-rules/" style="text-decoration: none;" target="_blank">Rule #32</a>: Enjoy the little things</b></h3>
-            <h5>Don't forget to have fun, <span class="w3-opacity">August 18, 2022</span></h5>
-          </div>
-
-          <div class="w3-container">
-            <p>
-              I don't have much to update on today, so I figured I might try to leave my future self a little bit of advice. 
-              I mostly worked on brainstorming some ideas and jotting down a bunch of notes about the features I would like this site to have. 
-              When I started to actually edit the site a little bit, that little black rectangle at the top of the page in the 
-              subheading caught my eye. It subtly reminded me of Google's "I'm Feeling Lucky" button for some odd reason. This made 
-              me really want to implement a little function that would randomize the text in that box and add some simple animations to it. 
-              Go ahead and hover over it and click it a few times. It's pretty fun.
-              All I had to do was copy down a few hundred adjectives and nouns, use some Math.random(), and, unfortunately, toy around with 
-              some CSS. 
-              <br/>
-              <br/>
-              The hardest part was actually setting up the JSON file that holds all of the words and properly accessing it 
-              on the site. There are a couple of minor things that I would like to fix, such as the size of the rectangle changing abruptly 
-              when new phrases are generated (I think this is going to require just the right Google query to figure out, as the first few 
-              'fixes' that I found didn't actually work) and probably removing some of the words so that I don't accidentally create any offensive 
-              combinations.
-              <br/>
-              <br/>
-              It is feels good when a little thing like this gets created because it can happen in such a short time, even if it does 
-              always end up having bugs and requiring me to read some documentation.
-            </p>
-            <div class="w3-row">
-              <div class="w3-col m8 s12">
-                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- notebook entry -->
-        <div class="w3-card-4 w3-margin w3-white">
+        <!-- notebook entry template with comment button-->
+        <!-- <div class="w3-card-4 w3-margin w3-white">
           <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">
           <div class="w3-container">
-            <h3><b>NOTEBOOK ENTRY</b></h3>
-            <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+            <h3><b>NEW NOTEBOOK ENTRY</b></h3>
+            <h5>Title description, <span class="w3-opacity">January 1, 1970</span></h5>
           </div>
 
           <div class="w3-container">
-            <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod
-              placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non
-              congue ullam corper. Praesent tincidunt sed
-              tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non
-              fringilla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit velit ipsum, vulputate tempor nisi 
+              porta sollicitudin. Nulla sed euismod tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+              Nam euismod dignissim vehicula. Sed efficitur nulla a neque maximus aliquam. In ante mi, lacinia id dui eget, 
+              sagittis scelerisque nibh. Cras pellentesque ex a cursus eleifend.
+              <br/>
+              <br/>
+              Sed cursus pellentesque magna, sed tempor nunc bibendum ac. Duis ornare ipsum quis justo vestibulum, sed 
+              condimentum velit auctor. Vestibulum vitae turpis ut est pellentesque porttitor. Duis porta auctor nisi. 
+              Proin pellentesque tellus quis aliquet egestas. Curabitur id mi nec velit imperdiet pulvinar. Donec nec orci placerat, 
+              congue nisl eu, condimentum orci. Cras in sapien sed sapien consectetur rutrum et sed nulla. Maecenas massa urna, 
+              tempus tincidunt posuere id, accumsan ut nulla. Sed eget elementum sapien. Quisque metus metus, efficitur sollicitudin 
+              egestas pellentesque, varius nec ligula. Integer porttitor nulla quam, eu euismod risus convallis imperdiet. Nullam porttitor, 
+              felis nec aliquet luctus, massa augue porta augue, ut feugiat sapien lacus ut sapien.</p>
             <div class="w3-row">
               <div class="w3-col m8 s12">
                 <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
@@ -149,7 +285,7 @@ and is wrapped around the whole page content, except for the footer in this exam
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- END NOTEBOOK ENTRIES -->
       </div>
 
@@ -157,7 +293,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-col l4">
         <!-- About Card -->
         <div class="w3-card w3-margin w3-margin-top">
-          <img src="/images/notebookimgs/empirestate.jpg" style="width:100%">
+          <img src="/images/notebookimgs/empirestate.jpg" alt="Me standing on top of the Rockefeller Center. The Empire State Building is in the background." style="width:100%">
           <div class="w3-container w3-white">
             <h4><b>Denver Massey</b></h4>
             <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of
@@ -227,14 +363,18 @@ and is wrapped around the whole page content, except for the footer in this exam
   </div>
 
   <!-- Footer -->
-  <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <footer id="footer" class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
     <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
     <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+    <p>
+      <sup><a href="#random-spinner">&dagger;</a></sup>These phrases are randomly generated using words from 
+      <a href="https://typeofnan.dev/generating-random-human-readable-slugs-in-javascript/">https://typeofnan.dev/generating-random-human-readable-slugs-in-javascript/</a>.
+      I apologize if it generates anything offensive.
+    </p>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
   </footer>
 
-  <script type="text/javascript" src="notebook.js"></script>
-  <script type="text/javascript" src="spinner.json"></script>
+  <script type="module" src="notebook.js"></script>
 </body>
 
 </html>
