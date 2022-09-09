@@ -112,3 +112,11 @@ a.fa {
 .hidden {
   display: none;
 }
+
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+th {
+  padding: 10px;
+}

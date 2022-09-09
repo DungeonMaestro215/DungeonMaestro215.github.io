@@ -89,6 +89,90 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         <!-- notebook entry -->
         <div class="w3-card-4 w3-margin w3-white">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bubblesort-edited-color.svg/1280px-Bubblesort-edited-color.svg.png" alt="Bubblesort represented with colored lines" style="width:100%">
+          <div class="w3-container">
+            <h3><b>The Gold Standard of Badness</b></h3>
+            <h5>Schedule solidified, TV watched, time to code, <span class="w3-opacity">September 8, 2022</span></h5>
+          </div>
+
+          <div class="w3-container">
+            <p>
+              As you can see, I took a bit of a break. This is all Mr. Robot's fault. All of my personal project time was transformed 
+              into TV time the past couple of weeks, and it has been amazing. I finished watching Mr. Robot, and it was absolutely fantastic. 
+              Although I am definitely the target audience for the show, I think I can confidently say that this is top 3 television shows 
+              I have watched. Highly recommend.
+              <br/>
+              <br/>
+              Anywho, it is time for me to write down some of my notes from the stuff I did find time to work on. I mostly just wrote little 
+              programs that related to what I was doing in my classes. For example, I made a fun little sorting algorithm comparison program 
+              so that I could see just how good Quicksort is (spoiler, it's pretty good). My code is available on my <a href="https://github.com/DungeonMaestro215/ForFun/tree/main/Sorting%20Algos">
+                GitHub.
+              </a>
+              Here are some stats from running it on my laptop:
+
+              <br/>
+
+              <table>
+                <tr>
+                  <th>Sorting Algo Runtime</th>
+                  <th>10,000 items</th>
+                  <th>100,000 items</th>
+                  <th>100,000,000 items</th>
+                </tr>
+                <tr>
+                  <td>Bubble</td>
+                  <td>0.324s</td>
+                  <td>35.58s</td>
+                  <td>Too long</td>
+                </tr>
+                <tr>
+                  <td>Selection</td>
+                  <td>0.127s</td>
+                  <td>12.56s</td>
+                  <td>Too long</td>
+                </tr>
+                <tr>
+                  <td>Insertion</td>
+                  <td>0.078s</td>
+                  <td>7.41s</td>
+                  <td>Too long</td>
+                </tr>
+                <tr>
+                  <td>Merge</td>
+                  <td>0.002s</td>
+                  <td>0.03s</td>
+                  <td>30.9s</td>
+                </tr>
+                <tr>
+                  <td>Quick</td>
+                  <td>0.001s</td>
+                  <td>0.02s</td>
+                  <td>26.0s</td>
+                </tr>
+              </table>
+
+              <br/>
+              I probably wasn't timing these in the best way, but it still gives a good overall look at comparing O(n^2) and O(nlgn) runtimes. 
+              The fact that being smart about your implementation of an algorithm and not just doing the naive approach can make such a huge 
+              difference in the practicality of the software amazes me. Both Mergesort and Quicksort were able to sort 1000x more elements that 
+              Bubblesort in less time.
+
+              <br/>
+              <br/>
+              I would like to eventually go back and add some more sorts to this list as well as improve my implementations of the current ones. For example, 
+              the recursive algorithms can actually benefit by using a 'worse' sort on the smaller list sizes because they are actually faster for fewer elements. 
+              Additionally, they can likely be parallelized.
+            </p>
+            <div class="w3-row">
+              <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- notebook entry -->
+        <div class="w3-card-4 w3-margin w3-white">
           <img src="https://assets.mkdev.me/posts/covers/000/000/230/original/why-being-a-developer-is-frustrating-and-why-we-do-it-anyway.png?1607424870" alt="Cartoon of hipster purposefully pouring coffee on his laptop" style="width:100%">
           <div class="w3-container">
             <h3><b>WEB DEV WOES</b></h3>
