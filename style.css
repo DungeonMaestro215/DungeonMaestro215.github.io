@@ -86,6 +86,14 @@ a.fa {
   text-decoration: none;
 }
 
+.headerimg {
+  width: 60px;
+}
+
+.vert-flip {
+  transform: scaleX(-1);
+}
+
 #random-spinner {
   font-family: 'Courier New', Courier, monospace;
   /* width: 100px; */
