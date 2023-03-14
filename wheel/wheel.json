@@ -1,0 +1,38 @@
+{
+    "projects" : [
+        "Personal Website",
+        "OpenGL 3D Rendering",
+        "OpenGL 3D Physics Engine",
+        "OpenGL 2D Physics Engine",
+        "LED Matrix Paint",
+        "LED String Effects",
+        "AI/ML Practice / Tutorial Webpage",
+        "PID Controllers in Unity",
+        "Sphereical Pendulum Project",
+        "Custom Disk Drive",
+        "Animate Suit of Armor",
+        "Artsy.io"
+
+    ],
+
+    "games" : [
+        "Hollow Knight",
+        "Elden Ring",
+        "Slay the Spire",
+        "Loop Hero",
+        "Omori",
+        "Inscryption",
+        "Portal",
+        "Factorio",
+        "Hyper Light Drifter",
+        "Momodora",
+        "One Step from Eden"
+    ],
+
+    "other" : [
+        "Gravitation",
+        "Read",
+        "Play the guitar",
+        "Tidy"
+    ]
+}

@@ -104,6 +104,16 @@ a.fa {
   cursor: pointer;
 }
 
+#wow {
+  font-family: 'Courier New', Courier, monospace;
+  /* width: 100px; */
+  position: relative;
+  top: 8px;
+  height: 27px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
 .spinner-element {
   white-space: nowrap;
   text-align: center;
