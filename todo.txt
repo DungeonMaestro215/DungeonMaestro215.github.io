@@ -6,6 +6,7 @@ AI/ML Ideas
 Website
 Blog (with filters, etc.)
 Calculating Pi
+  - Did this in MiniJava somewhat successfully
 
 
 Ideas:
@@ -23,6 +24,13 @@ Completed:
 Keyboard
 
 Website Ideas:
+Better blog organization
+  - linking to posts
+  - only showing newest ~5
+  - tags
+  - random post picker
+Spell check past posts
+  - add 'edited date'
 Random project picker and checker
 Write About Me section
 Flesh out projects
